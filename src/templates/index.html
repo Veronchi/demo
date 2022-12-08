@@ -4,7 +4,65 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
-  <body></body>
+  <body class="body">
+    <header class="header">
+      <div class="container">
+        <div class="header__content">
+          <h1 class="logo">
+            LoremIpsum.<span class="logo__domain logo__domain_highlight"
+              >Net</span
+            >
+          </h1>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link nav__link_active" href="#">бизнес</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">о нас</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">цены</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">оформить заказ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="intro">
+        <div class="container">
+          <h2 class="intro__title">
+            <span class="highlight-text">Lorem ipsum</span>
+            dolor sit <br />
+            amet consectetur spa
+            <span class="highlight-text">adipiscing</span>
+          </h2>
+          <p class="intro__text">
+            At vero eos et accusamus et iusto odio dignissimos ducimus!
+          </p>
+          <ul class="intro__list">
+            <li class="intro__item">Totam rem aperiam eaque ipsa</li>
+            <li class="intro__item">
+              Sit voluptatem accusantium doloremque laudantium
+            </li>
+            <li class="intro__item">
+              Sed ut perspiciatis, unde omnis iste natus error
+            </li>
+          </ul>
+          <div class="btn-wrapper">
+            <button class="button button__order">заказать</button>
+            <button class="button button__more">подробнее</button>
+          </div>
+        </div>
+      </section>
+      <section class="order"></section>
+    </main>
+    <footer></footer>
+  </body>
 </html>

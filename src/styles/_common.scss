@@ -1,0 +1,26 @@
+$palette: (
+  primary: #ffffff,
+  primary-dark: #000000,
+  dark-blue: #272733,
+  gray-blue: #3d4050,
+  gray: #bbbbbb,
+  dark-gray: #6f6d7b,
+  active: #43abf0,
+  blue: #3e9cdc,
+  blue-light: #42a9ed,
+);
+
+$text-size: (
+  headers: (
+    primary: 36px,
+    large: 48px,
+    logo: 28px,
+  ),
+  text: (
+    primary: 20px,
+    size-m: 18px,
+    size-s: 16px,
+    size-xs: 15px,
+    size-xxs: 13px,
+  ),
+);

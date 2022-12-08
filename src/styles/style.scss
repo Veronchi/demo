@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway&display=swap");
+@import "./normalize.css";
+@import "./common";
+@import "./buttons";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  max-width: 1175px;
+  margin: 0 auto;
+}
+
+.header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  background: rgba(16, 16, 29, 0.9);
+
+  .header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 33px;
+    padding-bottom: 30px;
+  }
+}
+
+.logo {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-size: map-get(map-get($text-size, headers), logo);
+  font-weight: 800;
+  line-height: 33px;
+  color: map-get($palette, primary);
+
+  &__domain {
+    &_highlight {
+      color: map-get($palette, blue-light);
+    }
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    justify-content: start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .nav__item {
+      .nav__link {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: map-get(map-get($text-size, text), size-xxs);
+        line-height: 16px;
+        color: map-get($palette, primary);
+
+        &_active {
+          color: map-get($palette, active);
+        }
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .nav__item + .nav__item {
+      margin-left: 60px;
+    }
+  }
+}
+
+.intro {
+  position: relative;
+  padding: 200px 0;
+  background-image: url("../assets/img/intro-img.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__title {
+    font-size: map-get(map-get($text-size, headers), large);
+    line-height: 58px;
+    color: map-get($palette, primary-dark);
+    margin: 0;
+    margin-bottom: 80px;
+
+    .highlight-text {
+      color: map-get($palette, blue);
+    }
+  }
+
+  &__text {
+    color: map-get($palette, primary-dark);
+    font-size: map-get(map-get($text-size, text), primary);
+    line-height: 24px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    list-style: none;
+    font-size: map-get(map-get($text-size, text), primary);
+    line-height: 24px;
+    padding-left: 25px;
+    margin: 0;
+    margin-bottom: 80px;
+
+    .intro__item {
+      position: relative;
+
+      &::before {
+        content: "-";
+        position: absolute;
+        left: -18px;
+      }
+    }
+  }
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: start;
+}
+
+.button {
+  @include btn;
+}
+
+.button__order {
+  @include btn-blue;
+}
+
+.button__more {
+  @include btn-regular;
+  margin-left: 2%;
+}
