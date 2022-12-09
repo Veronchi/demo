@@ -14,7 +14,7 @@
 }
 
 .container {
-  max-width: 1175px;
+  max-width: 1170px;
   margin: 0 auto;
 }
 
@@ -91,6 +91,8 @@
 
   &__title {
     font-size: map-get(map-get($text-size, headers), large);
+    width: 780px;
+    text-transform: uppercase;
     line-height: 58px;
     color: map-get($palette, primary-dark);
     margin: 0;
@@ -146,4 +148,141 @@
 .button__more {
   @include btn-regular;
   margin-left: 2%;
+}
+
+.order {
+  background-color: map-get($palette, dark-blue);
+  background-image: url("../assets/img/layer-img.png");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 121px;
+  padding-bottom: 151px;
+}
+
+.footer {
+  background-color: map-get($palette, gray-blue);
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  .footer__content {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    .footer__section {
+      position: relative;
+      padding-right: 40px;
+      margin-right: 40px;
+
+      &::before {
+        position: absolute;
+        content: "|";
+        right: 0px;
+        color: map-get($palette, light-gray);
+      }
+    }
+
+    .footer__section:last-child {
+      margin-right: 0;
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.copyright {
+  color: map-get($palette, primary);
+  font-size: map-get(map-get($text-size, text), size-xxs);
+  line-height: 16px;
+}
+
+.wallets {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    position: relative;
+    color: map-get($palette, light-gray);
+    font-size: map-get(map-get($text-size, text), size-xxs);
+    line-height: 16px;
+    margin-right: 29px;
+    padding-left: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &_qiwi::before {
+      background-image: url("../assets/icons/qiwi.svg");
+    }
+
+    &_yandex::before {
+      background-image: url("../assets/icons/yandex.svg");
+    }
+
+    &_web::before {
+      background-image: url("../assets/icons/web.svg");
+    }
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+}
+
+.contacts {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    position: relative;
+    margin-right: 38px;
+    padding-left: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &_mail::before {
+      background-image: url("../assets/icons/mail.svg");
+    }
+
+    &_vk::before {
+      background-image: url("../assets/icons/vk.svg");
+    }
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__link {
+    color: map-get($palette, primary);
+    font-size: map-get(map-get($text-size, text), size-xxs);
+    text-decoration: none;
+  }
 }
