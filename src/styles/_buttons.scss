@@ -11,6 +11,12 @@
   &:hover {
     box-shadow: 2px 3px 7px map-get($palette, dark-gray);
   }
+
+  @media screen and (max-width: 640px) {
+    width: 120px;
+    line-height: 35px;
+    font-size: 11px;
+  }
 }
 
 @mixin btn-blue {
