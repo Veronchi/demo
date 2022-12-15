@@ -21,6 +21,7 @@ module.exports = {
       template: "./src/templates/index.html",
       inject: "body",
       minify: false,
+      favicon: "./src/assets/icons/favicon.ico",
     }),
   ],
   module: {
