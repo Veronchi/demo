@@ -1,94 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body class="body">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+</head>
+
+<body class="body">
     <header class="header">
-      <div class="container">
-        <div class="header__content">
-          <h1 class="logo">
-            LoremIpsum.<span class="logo__domain_highlight">Net</span>
-          </h1>
-          <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a class="nav__link nav__link_active" href="#">бизнес</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#">о нас</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#">цены</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#">оформить заказ</a>
-              </li>
-            </ul>
-          </nav>
+        <div class="container">
+            <div class="header__content">
+                <h1 class="logo">
+                    LoremIpsum.<span class="logo__domain_highlight">Net</span>
+                </h1>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a class="nav__link nav__link_active" href="#">бизнес</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">о нас</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">цены</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#order">оформить заказ</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-      </div>
     </header>
     <main>
-      <section class="intro">
-        <div class="container">
-          <h2 class="intro__title">
-            <span class="highlight-text">Lorem ipsum</span>
-            dolor sit ametconsectetur
-            <span class="highlight-text">adipiscing</span>
-          </h2>
-          <p class="intro__text">
-            At vero eos et accusamus et iusto odio dignissimos ducimus!
-          </p>
-          <ul class="intro__list">
-            <li class="intro__item">Totam rem aperiam eaque ipsa</li>
-            <li class="intro__item">
-              Sit voluptatem accusantium doloremque laudantium
-            </li>
-            <li class="intro__item">
-              Sed ut perspiciatis, unde omnis iste natus error
-            </li>
-          </ul>
-          <div class="btn-wrapper">
-            <button class="button button__order">заказать</button>
-            <button class="button button__more">подробнее</button>
-          </div>
-        </div>
-      </section>
-      <section class="order"></section>
+        <section class="intro">
+            <div class="container">
+                <h2 class="intro__title">
+                    <span class="highlight-text">Lorem ipsum</span>
+                    dolor sit ametconsectetur
+                    <span class="highlight-text">adipiscing</span>
+                </h2>
+                <p class="intro__text">
+                    At vero eos et accusamus et iusto odio dignissimos ducimus!
+                </p>
+                <ul class="intro__list">
+                    <li class="intro__item">Totam rem aperiam eaque ipsa</li>
+                    <li class="intro__item">
+                        Sit voluptatem accusantium doloremque laudantium
+                    </li>
+                    <li class="intro__item">
+                        Sed ut perspiciatis, unde omnis iste natus error
+                    </li>
+                </ul>
+                <div class="btn-wrapper">
+                    <a class="button button__order" href="#order">заказать</a>
+                    <button class="button button__more">подробнее</button>
+                </div>
+            </div>
+        </section>
+        <section class="order" id="order">
+            <div class="container">
+                <h2 class="order__title">
+                    Оформление <span class="highlight-text">Заказа</span>
+                </h2>
+                <p class="order__subtitle">
+                    Перед заполнением формы ознакомьтесь с нашей схемой работы!
+                </p>
+                <ul class="order__steps-list">
+                    <li class="order__steps-item">
+                        <div class="circle circle_loupe"></div>
+                        <span class="text">Lorem ipsum dolor sit amet</span>
+                    </li>
+                    <li class="separator">
+                        <ul class="dots">
+                            <li class="dots__item"></li>
+                            <li class="dots__item"></li>
+                            <li class="dots__item"></li>
+                            <li class="dots__item"></li>
+                            <li class="dots__item"></li>
+                        </ul>
+                    </li>
+                    <li class="order__steps-item">
+                        <div class="circle circle_percent"></div>
+                        <span class="text">Сonsecteturadipiscing elit</span>
+                    </li>
+                    <li class="separator">
+                        <ul class="dots">
+                            <li class="dots__item"></li>
+                            <li class="dots__item"></li>
+                            <li class="dots__item"></li>
+                            <li class="dots__item"></li>
+                            <li class="dots__item"></li>
+                        </ul>
+                    </li>
+                    <li class="order__steps-item">
+                        <div class="circle circle_documnet"></div>
+                        <span class="text">Sed do eiusmod tempor</span>
+                    </li>
+                    <li class="separator">
+                        <ul class="dots">
+                            <li class="dots__item"></li>
+                            <li class="dots__item"></li>
+                            <li class="dots__item"></li>
+                            <li class="dots__item"></li>
+                            <li class="dots__item"></li>
+                        </ul>
+                    </li>
+                    <li class="order__steps-item">
+                        <div class="circle circle_mail"></div>
+                        <span class="text">Esse cillum dolore eu fugiat</span>
+                    </li>
+                    <li class="separator">
+                        <ul class="dots">
+                            <li class="dots__item"></li>
+                            <li class="dots__item"></li>
+                            <li class="dots__item"></li>
+                            <li class="dots__item"></li>
+                            <li class="dots__item"></li>
+                        </ul>
+                    </li>
+                    <li class="order__steps-item">
+                        <div class="circle circle_money"></div>
+                        <span class="text">
+                            Excepteur sint occaecat cupidatat non proident
+                        </span>
+                    </li>
+                </ul>
+                <form action="#" class="form">
+                    <div class="form__container">
+                        <div class="form__item form__item_select">
+                            <div class="dropdown">
+                                <span class="dropdown__label"> Выберите тип системы </span>
+                                <input class="dropdown__input" type="text" name="dropdown" />
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item" id="1">Sed ut perspiciatis</li>
+                                    <li class="dropdown__item" id="2">Nemo enim ipsam</li>
+                                    <li class="dropdown__item" id="3">Et harum quidem</li>
+                                    <li class="dropdown__item" id="4">Temporibus autem</li>
+                                    <li class="dropdown__item" id="5">Itaque earum rerum</li>
+                                    <li class="dropdown__item" id="6">Itaque earum rerum</li>
+                                    <li class="dropdown__item" id="7">Itaque earum rerum</li>
+                                    <li class="dropdown__item" id="8">Itaque earum rerum</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form__item form__item_email">
+                            <input class="email" type="email" name="user-mail" placeholder="Ваш e-mail" pattern="+@"
+                                required />
+                        </div>
+                        <div class="form__item form__item_name">
+                            <input class="name" type="text" name="user-name" placeholder="Ваше имя" />
+                        </div>
+                        <div class="form__item form__item_range">
+                            <div class="range">
+                                <div class="range__infobar">
+                                    <span>Sed ut perspiciatis, unde omnis iste natus</span>
+                                    <label class="range__label" for="range">75%</label>
+                                </div>
+                                <input class="range__input" id="range" type="range" value="75" min="0" max="100"
+                                    step="1" name="range" />
+                            </div>
+                        </div>
+                        <div class="form__item form__item_file">
+                            <div class="file">
+                                <label class="file__label" for="file">
+                                    <span class="file__text">Прикрепить файл</span>
+                                </label>
+                                <input class="file__input_hidden" id="file" type="file" name="file" multiple />
+                            </div>
+                        </div>
+                    </div>
+                    <input class="button form__button_submit" type="submit" value="Отправить" />
+                </form>
+            </div>
+        </section>
     </main>
     <footer class="footer">
-      <div class="container">
-        <div class="footer__content">
-          <div class="footer__section">
-            <span class="copyright">
-              &#169; 2018 «LOREMIPSUM.NET» Все права защищены.
-            </span>
-          </div>
-          <span class="footer__separator"></span>
-          <div class="footer__section">
-            <ul class="wallets">
-              <li class="wallets__item wallets__item_qiwi">Qiwi wallet</li>
-              <li class="wallets__item wallets__item_yandex">Yandex Money</li>
-              <li class="wallets__item wallets__item_web">Web Money</li>
-            </ul>
-          </div>
-          <span class="footer__separator"></span>
-          <div class="footer__section">
-            <ul class="contacts">
-              <li class="contacts__item contacts__item_mail">
-                <a class="contacts__link" href="#">info@ipsum228.com</a>
-              </li>
-              <li class="contacts__item contacts__item_vk">
-                <a class="contacts__link" href="#">Мы вконтакте</a>
-              </li>
-            </ul>
-          </div>
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <span class="copyright">
+                        &#169; 2018 «LOREMIPSUM.NET» Все права защищены.
+                    </span>
+                </div>
+                <span class="footer__separator"></span>
+                <div class="footer__section">
+                    <ul class="wallets">
+                        <li class="wallets__item wallets__item_qiwi">Qiwi wallet</li>
+                        <li class="wallets__item wallets__item_yandex">Yandex Money</li>
+                        <li class="wallets__item wallets__item_web">Web Money</li>
+                    </ul>
+                </div>
+                <span class="footer__separator"></span>
+                <div class="footer__section">
+                    <ul class="contacts">
+                        <li class="contacts__item contacts__item_mail">
+                            <a class="contacts__link" href="mailto:info@ipsum228.com">info@ipsum228.com</a>
+                        </li>
+                        <li class="contacts__item contacts__item_vk">
+                            <a class="contacts__link" href="https://vk.com/" target="_blank">Мы вконтакте</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </footer>
-  </body>
+</body>
+
 </html>
