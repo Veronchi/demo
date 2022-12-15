@@ -41,14 +41,14 @@
 
     &::-moz-range-track {
       border-radius: 10px;
-      height: 6px;
+      height: 4px;
       border: 1px solid map-get($palette, primary);
       background-color: map-get($palette, light-gray);
     }
 
     &::-moz-range-thumb {
-      width: 24px;
-      height: 24px;
+      width: 20px;
+      height: 20px;
       border: 3px solid map-get($palette, border-blue);
       border-radius: 50%;
       background-color: map-get($palette, blue-light);

@@ -28,5 +28,5 @@
 @mixin btn-regular {
   border: 1px solid map-get($palette, dark-gray);
   background-color: map-get($palette, primary);
-  color: map-get($palette, dark-gray);
+  color: map-get($palette, dark);
 }

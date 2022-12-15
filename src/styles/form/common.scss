@@ -13,4 +13,9 @@
   &::placeholder {
     color: map-get($palette, dark-blue);
   }
+
+  &::-moz-placeholder {
+    color: map-get($palette, dark-blue);
+    opacity: 1;
+  }
 }
