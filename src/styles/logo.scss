@@ -1,0 +1,19 @@
+.logo {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-size: map-get(map-get($text-size, headers), logo);
+  font-weight: 800;
+  line-height: 33px;
+  color: map-get($palette, primary);
+
+  &__domain {
+    &_highlight {
+      color: map-get($palette, blue-light);
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,42 @@
+@import "./common.scss";
+
+.range {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 48px;
+
+  &__infobar {
+    display: flex;
+    justify-content: space-between;
+    color: map-get($palette, primary);
+  }
+
+  &__input {
+    width: 100%;
+    border-radius: 10px;
+    background: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &::-webkit-slider-runnable-track {
+      border-radius: 10px;
+      height: 6px;
+      border: 1px solid map-get($palette, primary);
+      background-color: map-get($palette, light-gray);
+    }
+
+    &::-webkit-slider-thumb {
+      width: 24px;
+      height: 24px;
+      border: 3px solid map-get($palette, border-blue);
+      border-radius: 50%;
+      background-color: map-get($palette, blue-light);
+      appearance: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+      margin-top: -10px;
+    }
+  }
+}

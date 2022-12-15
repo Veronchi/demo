@@ -1,0 +1,10 @@
+.copyright {
+  color: map-get($palette, primary);
+  font-size: map-get(map-get($text-size, text), size-xxs);
+  line-height: 16px;
+
+  @media screen and (max-width: 640px) {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}

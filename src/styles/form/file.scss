@@ -1,0 +1,38 @@
+@import "./common.scss";
+
+.file {
+  &__label {
+    @include form-item;
+    display: block;
+    font-size: map-get(map-get($text-size, text), size-xs);
+    text-transform: uppercase;
+    background: map-get($palette, primary);
+    border: 2px solid map-get($palette, blue);
+    cursor: pointer;
+  }
+
+  &__text {
+    position: relative;
+    padding-left: 25px;
+    white-space: nowrap;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 17px;
+      height: 20px;
+      margin-top: -10px;
+      background-image: url("../assets/icons/file-icon.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__input_hidden {
+    position: absolute;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+}
