@@ -68,29 +68,38 @@
     margin: 0;
     padding: 0;
     text-align: left;
-    scrollbar-color: map-get($palette, blue);
+    scrollbar-color: map-get($palette, blue) map-get($palette, gray-blue);
+    scrollbar-width: thin;
+
 
     &_visible {
       display: block;
     }
 
-    &::-webkit-scrollbar {
+    &::-webkit-scrollbar,
+    &::-moz-scrollbar {
       width: 7px;
     }
 
-    &::-webkit-scrollbar-track {
+    &::-webkit-scrollbar-track,
+    &::-moz-scrollbar-track {
       margin: 3px;
       background-color: map-get($palette, gray-blue);
       border-radius: 3x;
       -webkit-background-color: map-get($palette, gray-blue);
       -webkit-border-radius: 3px;
+      -moz-background-color: map-get($palette, gray-blue);
+      -moz-border-radius: 3px;
     }
 
-    &::-webkit-scrollbar-thumb {
+    &::-webkit-scrollbar-thumb,
+    &::-moz-scrollbar-thumb {
       background: map-get($palette, blue);
-      border-radius: 3x;
+      border-radius: 3px;
       -webkit-background: map-get($palette, blue);
       -webkit-border-radius: 3px;
+      -moz-background: map-get($palette, blue);
+      -moz-border-radius: 3px;
     }
   }
 
