@@ -28,25 +28,35 @@ range.addEventListener("input", (e) => {
   rangeLabel.innerText = e.target.value + "%";
 });
 
-function test(arr, count = 0) {
+function animation(arr, count = 0) {
   const size = arr.length;
-  request(arr[count]).then(() => {
+  frame(getDots(arr, count, 3)).then(() => {
     if (size - 1 > count) {
-      test(arr, ++count);
+      animation(arr, ++count);
     } else {
-      test(arr, 0);
+      animation(arr, 0);
     }
   });
 }
 
-function request(dot) {
-  dot.classList.add("dots__item_active");
+function frame(dots) {
+  dots.map((elem) => elem.classList.add("dots__item_active"));
   return new Promise((res, rej) => {
     setTimeout(() => {
-      dot.classList.remove("dots__item_active");
+      dots.map((elem) => elem.classList.remove("dots__item_active"));
       res();
     }, 500);
   });
 }
 
-test(dotsArr);
+function getDots(arr, step, amount) {
+  const result = [];
+  if (step + amount > arr.length) return result;
+  for (let index = step; index < step + amount; index++) {
+    result.push(arr[index]);
+  }
+
+  return result;
+}
+
+animation(dotsArr);
