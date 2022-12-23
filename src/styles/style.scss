@@ -42,16 +42,16 @@
   text-align: center;
 }
 
-.button__order {
+.button_order {
   @include btn-blue;
 }
 
-.button__more {
+.button_more {
   @include btn-regular;
   margin-left: 2%;
 }
 
-.button__submit {
+.button_submit {
   @include btn-blue;
   width: 370px;
   margin: 0 auto;
